@@ -1,5 +1,7 @@
 # libcrust
 
+[![libcrust-ci](https://github.com/lfazio/libcrust/actions/workflows/ci.yaml/badge.svg)](https://github.com/lfazio/libcrust/actions/workflows/ci.yaml)
+
 C library to define data structure as proposed by Rust:
 - Rc: Reference Counters
 - Arc: Atomic Reference Counters
