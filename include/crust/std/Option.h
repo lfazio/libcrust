@@ -48,7 +48,7 @@ int Option_some(Option_t *o, void *ref);
  * @param o Pointer to the Option instance.
  * @return true if the Option contains a value, false otherwise.
  */
-bool Option_is_some(Option_t *o);
+bool Option_is_some(const Option_t *o);
 
 /**
  * @brief Set the Option to contain no value.
@@ -74,7 +74,7 @@ int Option_none(Option_t *o);
  * @param o Pointer to the Option instance.
  * @return true if the Option contains no value, false otherwise.
  */
-bool Option_is_none(Option_t *o);
+bool Option_is_none(const Option_t *o);
 
 /**
  * @brief Unwrap the Option to get the contained value.
@@ -82,7 +82,7 @@ bool Option_is_none(Option_t *o);
  * @param o Pointer to the Option instance.
  * @return Pointer to the contained value, or NULL if the Option contains no value.
  */
-void *Option_unwrap(Option_t *o);
+void *Option_unwrap(const Option_t *o);
 
 #ifdef __cplusplus
 } // extern "C"

@@ -124,6 +124,6 @@ int Arc_display(Arc_t arc)
 		return -EINVAL;
 	}
 
-	return printf("Arc<%zu, %p, %slocked>", Arc_strong_count(arc), Arc_ref(arc),
+	return printf("Arc<%zd, %p, %slocked>", Arc_strong_count(arc), Arc_ref(arc),
 		      atomic_load(&arc->lock) ? "" : "un");
 }

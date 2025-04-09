@@ -40,7 +40,7 @@ int Result_ok(Result_t *r, void *ref)
 	return 0;
 }
 
-bool Result_is_ok(Result_t *r)
+bool Result_is_ok(const Result_t *r)
 {
 	if (r && r->ok)
 		return true;
@@ -59,7 +59,7 @@ int Result_err(Result_t *r, int err)
 	return 0;
 }
 
-bool Result_is_err(Result_t *r)
+bool Result_is_err(const Result_t *r)
 {
 	return !Result_is_ok(r);
 }

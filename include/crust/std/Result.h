@@ -48,7 +48,7 @@ int Result_ok(Result_t *r, void *ref);
  * @param r Pointer to the Result instance.
  * @return true if the Result is successful, false otherwise.
  */
-bool Result_is_ok(Result_t *r);
+bool Result_is_ok(const Result_t *r);
 
 /**
  * @brief Set the Result to be an error with an error code.
@@ -73,7 +73,7 @@ int Result_err(Result_t *r, int err);
  * @param r Pointer to the Result instance.
  * @return true if the Result is an error, false otherwise.
  */
-bool Result_is_err(Result_t *r);
+bool Result_is_err(const Result_t *r);
 
 /**
  * @brief Unwrap the Result to get the contained value if successful.

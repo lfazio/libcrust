@@ -10,7 +10,7 @@
 
 #include <crust/std/Option.h>
 
-void * Option_unwrap(Option_t *o)
+void * Option_unwrap(const Option_t *o)
 {
 	if (Option_is_none(o))
 		return NULL;
@@ -29,7 +29,7 @@ int Option_some(Option_t *o, void *ref)
 	return 0;
 }
 
-bool Option_is_some(Option_t *o)
+bool Option_is_some(const Option_t *o)
 {
 	if (o && o->some)
 		return true;
@@ -47,7 +47,7 @@ int Option_none(Option_t *o)
 	return 0;
 }
 
-bool Option_is_none(Option_t *o)
+bool Option_is_none(const Option_t *o)
 {
 	if (!o || !o->some)
 		return true;
